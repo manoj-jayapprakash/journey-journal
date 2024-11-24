@@ -4,15 +4,12 @@ import { signOut } from "../actions";
 
 export function SignOutButton() {
   return (
-    <form action={signOut}>
-      <Button
-        type='submit'
-        variant='ghost'
-        className='text-red-600 hover:text-red-700 hover:bg-red-50'
-      >
-        <LogOut className='w-4 h-4 mr-2' />
-        Sign Out
-      </Button>
+    <form
+      action={signOut}
+      className='flex items-center gap-2 hover:bg-destructive w-full p-2 hover:rounded-sm px-2 py-1.5 cursor-pointer text-sm'
+    >
+      <LogOut className='' />
+      Sign Out
     </form>
   );
 }

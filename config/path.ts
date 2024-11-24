@@ -7,5 +7,6 @@ export const APPLICATION_PATH = {
       CREATE: "/journal/create",
       LIST: "/journal",
     },
+    PROFILE: "/profile",
   },
 };
