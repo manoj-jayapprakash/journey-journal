@@ -1,4 +1,4 @@
-@tailwind base;
+/* @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -66,4 +66,77 @@
   body {
     @apply bg-background text-foreground;
   }
+} */
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 25% 12%;
+    --foreground: 210 40% 98%;
+    --card: 230 25% 15%;
+    --card-foreground: 210 40% 98%;
+    --popover: 230 25% 15%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 84 100% 59%;
+    --primary-foreground: 230 25% 12%;
+    --secondary: 230 25% 18%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 230 25% 18%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 84 100% 59%;
+    --accent-foreground: 230 25% 12%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 230 25% 20%;
+    --input: 230 25% 20%;
+    --ring: 84 100% 59%;
+    --radius: 1rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.glass-card {
+  @apply bg-secondary/50 backdrop-blur-md border border-white/10 shadow-xl;
+}
+
+.neon-gradient {
+  background: linear-gradient(135deg, hsl(var(--primary)/0.2) 0%, transparent 100%);
+}
+
+.sidebar-item {
+  @apply flex items-center gap-3 px-4 py-2 rounded-lg text-muted-foreground hover:text-foreground hover:bg-secondary transition-colors;
+}
+
+.sidebar-item.active {
+  @apply bg-primary text-primary-foreground;
 }
